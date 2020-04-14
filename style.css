@@ -56,7 +56,20 @@ div#table_top_row {
     bottom: 0px;
 }
 
-
+.tooltip {
+    position: absolute;
+    
+    bottom: 60px;
+    background: #9970ce;
+    visibility: hidden;
+}
+.font_format {
+    font-size: x-large;
+    position: absolute;
+    bottom: 25px;
+    color: white;
+    text-shadow: -1px -1px 0 #2b0f54, 1px -1px 0 #2b0f54, -1px 1px 0 #2b0f54, 1px 1px 0 #2b0f54;
+}
 img.header_button {
 	position: absolute;
     left: 410px;
