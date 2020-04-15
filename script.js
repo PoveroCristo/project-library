@@ -128,7 +128,7 @@ function loopBooks(book) {
         if (library[i].rendered == false) {
             library[i].rendered = true;
             let divLibrary = document.createElement("div");
-            divLibrary.id = library[i].title;
+            divLibrary.id = library[i].title.toLowerCase();
             divTable.appendChild(divLibrary);
             divLibrary.style.position = "relative";
             divLibrary.style.width = "1210px";
@@ -170,9 +170,9 @@ function loopBooks(book) {
             //Book infos
             let bookTitleCell = document.createElement("h3")
             if (library[i].title.length > 24) {
-                bookTitleCell.innerHTML = library[i].title.substring(0,24) + "...";
+                bookTitleCell.innerHTML = library[i].title.substring(0,24).toLowerCase() + "...";
             } else {
-                bookTitleCell.innerHTML = library[i].title;
+                bookTitleCell.innerHTML = library[i].title.toLowerCase();
             }
             bookTitleCell.classList.add("title")
             bookTitleCell.classList.add("font_format")
@@ -180,7 +180,7 @@ function loopBooks(book) {
             divLibrary.appendChild(bookTitleCell)
 
             let titleToolTip = document.createElement("h3");
-            titleToolTip.innerHTML = library[i].title;
+            titleToolTip.innerHTML = library[i].title.toLowerCase();
             titleToolTip.style.left = "20px";
             titleToolTip.classList.add("tooltip");
             divLibrary.appendChild(titleToolTip);
@@ -195,9 +195,9 @@ function loopBooks(book) {
 
             let bookAuthorCell = document.createElement("h3")
             if (library[i].author.length > 11) {
-                bookAuthorCell.innerHTML = library[i].author.substring(0,11) + "...";
+                bookAuthorCell.innerHTML = library[i].author.substring(0,11).toLowerCase() + "...";
             } else {
-                bookAuthorCell.innerHTML = library[i].author;
+                bookAuthorCell.innerHTML = library[i].author.toLowerCase();
             }
             bookAuthorCell.classList.add("title")
             bookAuthorCell.classList.add("font_format")
@@ -205,7 +205,7 @@ function loopBooks(book) {
             divLibrary.appendChild(bookAuthorCell);
 
             let authorToolTip = document.createElement("h3");
-            authorToolTip.innerHTML = library[i].author;
+            authorToolTip.innerHTML = library[i].author.toLowerCase();
             authorToolTip.style.left = "600px";
             authorToolTip.classList.add("tooltip");
             divLibrary.appendChild(authorToolTip);
@@ -219,9 +219,9 @@ function loopBooks(book) {
 
             let bookGenreCell = document.createElement("h3");
             if (library[i].genre.length > 7) {
-                bookGenreCell.innerHTML = library[i].genre.substring(0,7) + "...";
+                bookGenreCell.innerHTML = library[i].genre.substring(0,7).toLowerCase() + "...";
             } else {
-                bookGenreCell.innerHTML = library[i].genre;
+                bookGenreCell.innerHTML = library[i].genre.toLowerCase();
             }
             bookGenreCell.classList.add("title")
             bookGenreCell.classList.add("font_format")            
@@ -229,7 +229,7 @@ function loopBooks(book) {
             divLibrary.appendChild(bookGenreCell);
 
             let genreTooltip = document.createElement("h3");
-            genreTooltip.innerHTML = library[i].genre;
+            genreTooltip.innerHTML = library[i].genre.toLowerCase();
             genreTooltip.style.left = "885px";
             genreTooltip.classList.add("tooltip");
             divLibrary.appendChild(genreTooltip);
@@ -243,9 +243,9 @@ function loopBooks(book) {
 
             let bookYearCell = document.createElement("h3")
             if (library[i].year.length > 4) {
-                bookYearCell.innerHTML = library[i].year.substring(0,2) + "...";
+                bookYearCell.innerHTML = library[i].year.substring(0,2).toLowerCase() + "...";
             } else {
-                bookYearCell.innerHTML = library[i].year;
+                bookYearCell.innerHTML = library[i].year.toLowerCase();
             }
             bookYearCell.classList.add("title")
             bookYearCell.classList.add("font_format")            
@@ -253,7 +253,7 @@ function loopBooks(book) {
             divLibrary.appendChild(bookYearCell);
 
             let yearTooltip = document.createElement("h3");
-            yearTooltip.innerHTML = library[i].year;
+            yearTooltip.innerHTML = library[i].year.toLowerCase();
             yearTooltip.style.left = "1115px";
             yearTooltip.classList.add("tooltip");
             divLibrary.appendChild(yearTooltip);
@@ -278,39 +278,39 @@ function loopBooks(book) {
                     case "title":
                     let newTitle = prompt("Choose a new title")
                     if (newTitle.length > 20) {
-                        bookTitleCell.innerHTML = newTitle(0,21) + "..."
+                        bookTitleCell.innerHTML = newTitle(0,21).toLowerCase() + "..."
                     } else {
-                    bookTitleCell.innerHTML = newTitle;
+                    bookTitleCell.innerHTML = newTitle.toLowerCase();
                     }
                     divLibrary.id = newTitle;
-                    titleToolTip.innerHTML = newTitle;                    
+                    titleToolTip.innerHTML = newTitle.toLowerCase();                    
                     break;
                 case "author":
                     let newAuthor = prompt("Choose a new author")
                     if (newAuthor.length > 11) {
-                        bookAuthorCell.innerHTML = newAuthor(0,11) + "..."
+                        bookAuthorCell.innerHTML = newAuthor(0,11).toLowerCase() + "..."
                     } else {
-                        bookAuthorCell.innerHTML = newAuthor;
+                        bookAuthorCell.innerHTML = newAuthor.toLowerCase();
                     }
-                    authorToolTip.innerHTML = newAuthor;
+                    authorToolTip.innerHTML = newAuthor.toLowerCase();
                     break;
                 case "genre":
                     let newGenre = prompt("Choose a new genre");
                     if (newGenre.length > 7) {
-                        bookGenreCell.innerHTML = newGenre(0,7) + "..."
+                        bookGenreCell.innerHTML = newGenre(0,7).toLowerCase() + "..."
                     } else {
-                        bookGenreCell.innerHTML = newGenre;
+                        bookGenreCell.innerHTML = newGenre.toLowerCase();
                     }
-                    genreTooltip.innerHTML = newGenre;
+                    genreTooltip.innerHTML = newGenre.toLowerCase();
                     break;
                 case "year":
                     let newYear = prompt("Choose a new year");
                     if (newYear.length > 4) {
-                        bookYearCell.innerHTML = newYear(0,2) + "..."
+                        bookYearCell.innerHTML = newYear(0,2).toLowerCase() + "..."
                     } else {
-                        bookYearCell.innerHTML = newYear;
+                        bookYearCell.innerHTML = newYear.toLowerCase();
                     }
-                    yearTooltip.innerHTML = newYear;
+                    yearTooltip.innerHTML = newYear.toLowerCase();
                     break;
                 default:
                     alert("Invalid choice.")
@@ -369,39 +369,39 @@ function editEntry() {
                     case "title":
                     let newTitle = prompt("Choose a new title")
                     if (newTitle.length > 20) {
-                        divToEdit.children[2].innerHTML = newTitle(0,21) + "..."
+                        divToEdit.children[2].innerHTML = newTitle(0,21).toLowerCase() + "..."
                     } else {
-                    divToEdit.children[2].innerHTML = newTitle;
+                    divToEdit.children[2].innerHTML = newTitle.toLowerCase();
                     }
                     divToEdit.id = newTitle;
-                    divToEdit.children[3].innerHTML = newTitle;                    
+                    divToEdit.children[3].innerHTML = newTitle.toLowerCase();                    
                     break;
                 case "author":
                     let newAuthor = prompt("Choose a new author")
                     if (newAuthor.length > 20) {
-                        divToEdit.children[4].innerHTML = newAuthor(0,11) + "..."
+                        divToEdit.children[4].innerHTML = newAuthor(0,11).toLowerCase() + "..."
                     } else {
-                    divToEdit.children[4].innerHTML = newAuthor;
+                    divToEdit.children[4].innerHTML = newAuthor.toLowerCase();
                     }
-                    divToEdit.children[5].innerHTML = newAuthor;                    
+                    divToEdit.children[5].innerHTML = newAuthor.toLowerCase();                    
                     break;                    
                 case "genre":
                     let newGenre = prompt("Choose a new genre");
                     if (newGenre.length > 7) {
-                        divToEdit.children[6].innerHTML = newGenre(0,7) + "..."
+                        divToEdit.children[6].innerHTML = newGenre(0,7).toLowerCase() + "..."
                     } else {
-                    divToEdit.children[6].innerHTML = newGenre;
+                    divToEdit.children[6].innerHTML = newGenre.toLowerCase();
                     }
-                    divToEdit.children[7].innerHTML = newGenre;                    
+                    divToEdit.children[7].innerHTML = newGenre.toLowerCase();                    
                     break;   
                 case "year":
                     let newYear = prompt("Choose a new year");
                     if (newYear.length > 20) {
-                        divToEdit.children[8].innerHTML = newYear(0,2) + "..."
+                        divToEdit.children[8].innerHTML = newYear(0,2).toLowerCase() + "..."
                     } else {
-                    divToEdit.children[8].innerHTML = newYear;
+                    divToEdit.children[8].innerHTML = newYear.toLowerCase();
                     }
-                    divToEdit.children[9].innerHTML = newYear;                    
+                    divToEdit.children[9].innerHTML = newYear.toLowerCase();                    
                     break;   
                 default:
                     alert("Invalid choice.")
